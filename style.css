@@ -10,12 +10,12 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
 }
 
 body {
-    background-image: url(../images/bg-body.png);
+    background-image: url('../images/bg-body.png');
 }
 
 /* ==================
@@ -39,7 +39,6 @@ header.main-header {
 .logo {
     border-radius: 50%;
     margin: 15px 0 30px 0;
-    width: 180px;
 }
 
 nav.main-nav {
@@ -50,7 +49,7 @@ nav.main-nav ul {
     padding: 0;
 }
 
-nav.main-nav ul li {
+nav.main-nav ul li {   
     display: inline-block;
     margin-right: 20px;
 }
@@ -63,10 +62,10 @@ nav.main-nav ul li a {
     width: 180px;
     height: 50px;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #555;
     padding: 14px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     transition: transform 0.25s ease-in-out;
 }
 
@@ -78,11 +77,11 @@ nav.main-nav ul li a:hover {
 - Sección banner
 ================== */
 
-section.banner {
+.banner {
     margin-bottom: 20px;
 }
 
-section.banner img {
+.banner img {
     width: 100%;
 }
 
@@ -91,12 +90,11 @@ section.banner img {
 ================== */
 
 section.vip-products {
-
-
+    overflow: hidden;
 }
 
 section.vip-products article {
-    width: 32.20%;
+    width: 32.2%;
     position: relative;
     margin-right: 1.7%;
     margin-bottom: 30px;
@@ -126,7 +124,6 @@ section.vip-products article .zoom {
     height: 40px;
     display: block;
     position: absolute;
-    text-transform: uppercase;
     padding: 9px;
     margin-top: -20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -137,43 +134,66 @@ section.vip-products article .zoom {
 }
 
 section.vip-products article h2 {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 section.vip-products article p {
     margin-bottom: 20px;
-    color: rgb(71, 71, 71);
-    font-size: 20px;
 }
 
 section.vip-products article .more {
-    width: 50px;
-    height: 40px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-decoration: none;
     padding: 6px 10px;
 }
 
+@media (max-width: 940px) {
+    section.vip-products {
+        padding: 0 20px;
+    }
+    section.vip-products article {
+        width: 49%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    section.vip-products article:nth-child(even) {
+        margin-right: 0;
+    }
+
+    section.vip-products article:nth-child(odd) {
+        margin-right: 2%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    section.vip-products article {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
 /* ==================
 - Sección footer
 ================== */
 
-footer.main-footer {
-    clear: both;
+footer {
     height: 120px;
-    background-color: #d00000;
+    background-color: red;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding-top: 40px;
 }
 
-footer.main-footer ul {
+footer ul {
     padding: 0;
     text-align: center;
 }
 
-footer.main-footer ul li {
+footer ul li {
     display: inline-block;
     border-right: 1px solid white;
     padding: 0 10px;
@@ -183,7 +203,7 @@ footer ul li:last-child {
     border: none;
 }
 
-footer.main-footer ul li a {
+footer ul li a {
     color: white;
     text-decoration: none;
 }
